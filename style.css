@@ -63,16 +63,25 @@ a {
 
 .navbar {
     width: 100%;
-    padding: 25px 8%;
+    padding: 20px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    z-index: 10;
-    background: rgba(7, 13, 26, 0.65);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    background: rgba(7, 13, 26, 0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
+html {
+    scroll-padding-top: 90px;
+}
+
 
 .logo {
     font-family: 'Outfit', sans-serif;
@@ -865,12 +874,18 @@ body::before {
 
 /* Keep content above background */
 
-.navbar,
 main {
     position: relative;
     z-index: 1;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
 /* =====================================
    SKILLS SECTION
 ===================================== */
